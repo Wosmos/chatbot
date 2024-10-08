@@ -21,12 +21,12 @@ export default function ChatHeader() {
   };
 
   return (
-    <div className='w-full max-w-3xl mx-auto px-4 py-8'>
+    <div className='w-full max-w-3xl mx-auto px-4 py-8 '>
       <div className='text-center mb-8'>
         <div className='flex justify-center mb-4'>
           <MessageSquare className='h-12 w-12 text-blue-500' />
         </div>
-        <h1 className='text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
+        <h1 className='text-6xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
           Website Chat Assistant
         </h1>
         <p className='text-lg text-gray-600 dark:text-gray-300'>

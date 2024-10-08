@@ -81,7 +81,7 @@ export function ChatInput({
         onChange={handleInputChange}
         placeholder='Ask something...'
         spellCheck={false}
-        className='w-full focus:outline-none bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg px-4 py-3 pr-12 resize-none text-gray-800 dark:text-gray-200'
+        className='w-full focus:outline-none bg-white dark:bg-zinc-800 border border-gray-200  rounded-lg px-4 py-3 pr-12 resize-none text-gray-800 dark:text-gray-200  dark:border-neutral-800 dark:bg-zinc-800/30'
       />
       <button
         type='submit'

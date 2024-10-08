@@ -24,8 +24,6 @@
 //   );
 // };
 
-
-
 import { Message } from 'ai';
 import { Copy, Check, Bot, User } from 'lucide-react';
 import { useState } from 'react';
@@ -52,9 +50,9 @@ function MessageItem({ message }: { message: Message }) {
 
   return (
     <div
-      className={`flex gap-3 ${
+      className={`flex gap-3   ${
         message.role === 'assistant'
-          ? 'bg-gray-100 dark:bg-zinc-800 p-4 rounded-lg'
+          ? 'bg-gray-100 dark:bg-zinc-800 p-4 rounded-lg shadow-md shadow-black/10  dark:border-1 dark:border-white/20' 
           : ''
       }`}
     >
@@ -63,7 +61,7 @@ function MessageItem({ message }: { message: Message }) {
       ) : (
         <User className='h-6 w-6 text-gray-500' />
       )}
-      <div className='flex-1'>
+      <div className='flex-1 '>
         <div className='prose dark:prose-invert max-w-none'>
           <ReactMarkdown>{message.content}</ReactMarkdown>
         </div>

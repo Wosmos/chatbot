@@ -15,7 +15,7 @@ export const Message = ({ content, isUserMessage }: MessageProps) => {
         'bg-zinc-900/25': !isUserMessage,
       })}
     >
-      <div className='p-6'>
+      <div className='p-6 '>
         <div className='max-w-3xl mx-auto flex items-start gap-2.5'>
           <div
             className={cn(
