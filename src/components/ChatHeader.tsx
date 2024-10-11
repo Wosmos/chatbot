@@ -41,16 +41,16 @@ export default function ChatHeader() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder='Enter website URL (e.g., example.com)'
-          className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all'
+          className='w-full  px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all'
         />
         <button
           type='submit'
           disabled={!url || isLoading}
-          className={`mt-4 w-full px-4 py-3 rounded-lg bg-blue-500 text-white font-medium 
+          className={`mt-4 w-full px-4 py-3 rounded-lg  hover:bg-blue-500 border-1 border-blue-500 text-white font-medium 
             ${
               isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
             } 
-            transition-all duration-200 ease-in-out transform hover:scale-[1.02]`}
+            transition-all duration-200 ease-in-out transform cursor-pointer`}
         >
           {isLoading ? (
             <div className='flex items-center justify-center'>

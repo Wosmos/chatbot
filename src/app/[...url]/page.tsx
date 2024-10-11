@@ -47,7 +47,10 @@ const Page = async ({ params }: PageProps) => {
   }
 
   return (
-    <ChatWrapper sessionId={sessionId} initialMessages={initialMessages} />
+    <ChatWrapper 
+    sessionId={sessionId} 
+    initialMessages={initialMessages} 
+    />
   );
 };
 
