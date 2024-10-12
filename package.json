@@ -11,8 +11,11 @@
   "dependencies": {
     "@nanostores/react": "github:ai/react",
     "@nextui-org/react": "^2.4.8",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
     "@upstash/rag-chat": "^2.0.0",
     "@upstash/redis": "^1.34.2",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.2",
     "lucide-react": "^0.447.0",
