@@ -9,7 +9,7 @@ export default function ChatHeader() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -41,14 +41,16 @@ export default function ChatHeader() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder='Enter website URL (e.g., example.com)'
-          className='w-full  px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all'
+          className='w-full  px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all   dark:focus:ring-yellow-500 '
         />
         <button
           type='submit'
           disabled={!url || isLoading}
-          className={`mt-4 w-full px-4 py-3 rounded-lg  hover:bg-blue-500 border-1 border-blue-500 text-white font-medium 
+          className={`mt-4 w-full px-4 py-3 rounded-lg  border-yellow-500 dark:hover:bg-blue-500 border-2 dark:border-blue-500 text-gray-600 dark:text-gray-300 font-medium 
             ${
-              isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+              isLoading
+                ? 'opacity-50 cursor-not-allowed'
+                : 'dark:hover:bg-blue-600 hover:bg-yellow-500 hover:text-white'
             } 
             transition-all duration-200 ease-in-out transform cursor-pointer`}
         >
