@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { ChevronLeft, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
-
+import Image from 'next/image';
 interface NavItem {
   label: string;
   href: string;
@@ -56,7 +56,13 @@ export default function ChatNavbar({
             {typeof heading === 'string' ? (
               heading
             ) : (
-              <img src={heading.logoSrc} alt={heading.alt} className='h-8' />
+              <Image
+                width={40}
+                height={40}
+                src={heading.logoSrc}
+                alt={heading.alt}
+                className='h-8'
+              />
             )}
           </h1>
         </div>

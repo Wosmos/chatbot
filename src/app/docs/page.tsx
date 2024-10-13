@@ -150,7 +150,7 @@ const DocsPage: React.FC = () => {
           <p className='mb-4'>
             Web chat ai Assistant is an intelligent chatbot that can analyze and
             discuss the content of any website. Simply enter a URL, and start a
-            conversation about the webpage's content.
+            conversation about the webpage&apos;s content.
           </p>
 
           <h2 id='overview' className='mb-4 mt-8 text-3xl font-semibold'>
@@ -158,7 +158,7 @@ const DocsPage: React.FC = () => {
           </h2>
           <p className='mb-4'>This application allows users to:</p>
           <ul className='list-inside list-disc space-y-2'>
-            <li>Chat with an AI about any website's content</li>
+            <li>Chat with an AI about any website&apos;s content</li>
             <li>Copy and share AI responses</li>
             <li>Toggle between light and dark themes</li>
             <li>Engage in natural, context-aware conversations</li>
@@ -191,7 +191,7 @@ const DocsPage: React.FC = () => {
               <strong>Database</strong>: Upstash Redis
             </li>
             <li>
-              <strong>AI Integration</strong>: Anthropic's Claude API
+              <strong>AI Integration</strong>: Anthropic&apos;s Claude API
             </li>
             <li>
               <strong>State Management</strong>: React Hooks
@@ -357,7 +357,7 @@ const DocsPage: React.FC = () => {
           <ul className='list-inside list-disc space-y-2'>
             <li>
               <strong>Website Content Analysis</strong>: Instantly chat about
-              any website's content
+              any website&apos;s content
             </li>
             <li>
               <strong>Responsive Design</strong>: Works seamlessly on desktop
@@ -400,7 +400,7 @@ const DocsPage: React.FC = () => {
               }}
             >
               LICENSE
-            </button>{' '}
+            </button>
             file for details.
           </p>
         </main>

@@ -8,6 +8,5 @@ export function middleware(req: NextRequest) {
   if (!cookie) {
     res.cookies.set("sessionId", crypto.randomUUID());
   }
-
   return res;
 }
