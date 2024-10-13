@@ -1,10 +1,9 @@
-
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { MessageSquare, Clipboard, ChevronRight } from 'lucide-react';
+import ChatNavbar from './ChatNavbar';
 
 export default function ChatHeader() {
   const [url, setUrl] = useState('');
@@ -12,7 +11,7 @@ export default function ChatHeader() {
 
   // const [chatHistory, setChatHistory] = useState([]);
   const [error, setError] = useState('');
-   const [chatHistory, setChatHistory] = useState<string[]>([]);
+  const [chatHistory, setChatHistory] = useState<string[]>([]);
   const [suggestions] = useState([
     'example.com',
     'wikipedia.org',
@@ -75,11 +74,18 @@ export default function ChatHeader() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen w-full max-w-3xl mx-auto px-4 py-8  p-4'>
-      <div className='w-full max-w-3xl mx-auto px-4 py-8'>
+    <div className='flex flex-col items-center justify-center min-h-screen w-full max-w-4xl mx-auto px-4 py-8  p-4'>
+      <ChatNavbar
+        backBtn={false}
+        themeToggler={true}
+        heading='Wizmo 2.0'
+        isLoggedIn={true}
+      />
+
+      <div className='w-full max-w-4xl mx-auto px-4 py-8'>
         <div className='text-center mb-8'>
-          <MessageSquare className='h-12 w-12 dark:text-blue-500 text-yellow-500 mx-auto mb-4' />
-          <h1 className='text-6xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>
+          <MessageSquare className='h-12 w-12 dark:text-yellow-500 text-blue-500 mx-auto mb-4' />
+          <h1 className='text-6xl font-extrabold mb-2 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-yellow-500 dark:to-teal-400 bg-gradient-to-r from-blue-500 to-teal-400'>
             Website Chat Assistant
           </h1>
           <p className='text-lg text-gray-600 dark:text-gray-400'>
@@ -89,7 +95,7 @@ export default function ChatHeader() {
         </div>
 
         <form onSubmit={handleSubmit} className='space-y-4'>
-          <div className='flex group focus-within:ring-2 dark:focus-within:ring-blue-500 focus-within:ring-yellow-500 rounded-lg transition-all'>
+          <div className='flex group focus-within:ring-2 dark:focus-within:ring-yellow-500 focus-within:ring-blue-500 rounded-lg transition-all'>
             <input
               type='text'
               value={url}
@@ -108,8 +114,8 @@ export default function ChatHeader() {
           {error && <p className='text-red-500 text-sm'>{error}</p>}
           <button
             type='submit'
-            className=' hover:bg-blue-600  focus:outline-none focus:ring-2 dark:focus:ring-blue-500 focus:ring-yellow-500 transition-all
-            w-full px-4 py-3 rounded-lg  border-yellow-500 dark:hover:bg-blue-500 border-2 dark:border-blue-500 text-gray-600 dark:text-gray-300 font-medium'
+            className=' hover:text-white hover:bg-blue-500  focus:outline-none focus:ring-2 dark:focus:ring-yellow-500 focus:ring-blue-500 transition-all
+            w-full px-4 py-3 rounded-lg  border-blue-500 dark:hover:bg-yellow-500 border-2 dark:border-yellow-500 text-gray-600 dark:text-gray-300 font-medium'
             disabled={isLoading}
           >
             {isLoading ? (

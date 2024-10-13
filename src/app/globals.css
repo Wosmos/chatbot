@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body > * {
+  box-shadow: 0 0px 14px rgba(0, 0, 0, 0.1);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,10 +72,13 @@
   }
 }
 
-
 @keyframes loading {
-  0% { width: 0%; }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .animate-loading-bar {
@@ -81,7 +88,7 @@
 /* Add custom scrollbar styles */
 .scrollbar-custom {
   scrollbar-width: thin;
-  scrollbar-color: #4B5563 transparent;
+  scrollbar-color: #4b5563 transparent;
 }
 
 .scrollbar-custom::-webkit-scrollbar {
@@ -93,7 +100,7 @@
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #4B5563;
+  background-color: #4b5563;
   border-radius: 3px;
 }
 
@@ -122,14 +129,12 @@
 }
 
 @keyframes ping {
-  75%, 100% {
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }
 }
-
-
-
 
 /* Neural Network animations */
 @keyframes neuralMove {
@@ -149,7 +154,8 @@
 
 /* Digital Wave animations */
 @keyframes waveMove {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-100%);
   }
   50% {
@@ -158,7 +164,8 @@
 }
 
 @keyframes equalizer {
-  0%, 100% {
+  0%,
+  100% {
     height: 32px;
   }
   50% {
@@ -168,22 +175,49 @@
 
 /* Holographic animations */
 @keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(2px, -2px); }
-  40% { transform: translate(2px, 2px); }
-  60% { transform: translate(-2px, -2px); }
-  80% { transform: translate(-2px, 2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

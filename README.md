@@ -79,13 +79,17 @@ webchat-ai-assistant/
 │   │   └── chat-stream/
 │   │       └── route.ts # API route for chat
 │   ├── layout.tsx
-│   └── page.tsx        # Landing page
+│   └── page.tsx        # Home page
 ├── components/
+│   ├── ChatNavbar.tsx
 │   ├── ChatHeader.tsx
 │   ├── ChatInput.tsx
 │   ├── ChatWrapper.tsx
+│   ├── Gradient.tsx
 │   ├── Messages.tsx
+│   ├── MessageSkeleton.tsx
 │   ├── Providers.tsx
+│   ├── SplashScreen.tsx
 │   └── ThemeToggle.tsx
 ├── lib/
 │   ├── rag-chat.ts     # RAG implementation
