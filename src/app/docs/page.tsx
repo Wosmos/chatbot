@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import img from '../api/sampleDocsHomePageImg.png';
 import ChatNavbar from '@/components/ChatNavbar';
+import ImageCarousel from '@/components/ImageCarousel';
 import { useTheme } from 'next-themes';
 interface SidebarItem {
   title: string;
@@ -19,6 +20,12 @@ const sidebarItems: SidebarItem[] = [
   { title: 'Key Features', href: '#key-features' },
   { title: 'Contributing', href: '#contributing' },
   { title: 'License', href: '#license' },
+];
+
+const images = [
+  { src: img, alt: 'Image 1 description' },
+  { src: img, alt: 'Image 2 description' },
+  { src: img, alt: 'Image 3 description' },
 ];
 
 const DocsPage: React.FC = () => {
@@ -165,12 +172,10 @@ const DocsPage: React.FC = () => {
           </ul>
 
           <div className='my-8'>
-            <Image
-              src={img} // Directly use the imported image
-              alt='App Screenshot Placeholder'
-              layout='responsive' // Automatically adjusts layout
-              className='rounded-lg shadow-lg'
-            />
+            {/* <ImageCarousel images={images} /> */}
+            {/* <ImageCarousel
+              images={images.map((img) => ({ ...img, src: img.src.src }))}
+            /> */}
           </div>
 
           <h2 id='tech-stack' className='mb-4 mt-8 text-3xl font-semibold'>
