@@ -146,3 +146,11 @@ We welcome contributions! If you're interested in helping with any of these feat
 - This roadmap is a living document and will be updated as priorities change
 - Features may be implemented in a different order based on user feedback
 - Some features may be modified or removed based on feasibility and user needs
+
+
+
+# *---------------------------------------------------------------*
+# *----------------------------------
+
+
+

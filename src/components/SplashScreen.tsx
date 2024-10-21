@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
+
 
 const AINode = () => (
   <svg width='180' height='180' viewBox='0 0 120 120'>
@@ -18,7 +20,7 @@ const AINode = () => (
       cx='60'
       cy='60'
       r='40'
-      stroke='#818CF8'
+      stroke='#F59E0B'
       strokeWidth='2'
       fill='none'
       initial={{ pathLength: 0, rotate: 0 }}
@@ -31,7 +33,7 @@ const AINode = () => (
         cx='60'
         cy='60'
         r='30'
-        stroke='#C7D2FE'
+        stroke={useTheme().theme === 'light' ? '#4F46E5' : '#F59E0B'}
         strokeWidth='2'
         fill='none'
         initial={{ pathLength: 0 }}
@@ -48,18 +50,19 @@ const AINode = () => (
       cx='60'
       cy='60'
       r='5'
-      fill='#4F46E5'
+      fill={useTheme().theme === 'light' ? '#4F46E5' : '#F59E0B'}
       initial={{ scale: 0.5 }}
       animate={{ scale: [0.5, 1, 0.5] }}
       transition={{ duration: 2, repeat: Infinity }}
     />
     {[0, 1, 2, 3].map((index) => (
       <motion.circle
+        className='strock-blue-500 dark:strock-yellow-500 '
         key={index}
         cx='60'
         cy='60'
         r='2'
-        fill='#C7D2FE'
+        fill={useTheme().theme === 'light' ? '#4F46E5' : '#F59E0B'}
         initial={{ x: 0, y: 0, opacity: 0 }}
         animate={{
           x: [0, 30 * Math.cos((index * Math.PI) / 2)],
@@ -107,7 +110,7 @@ export default function SplashScreen({
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoading ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className='fixed inset-0 z-50 flex items-center justify-center overflow-hidden  bg-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-black'
+      className='fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-white dark:bg-gradient-to-tr dark:from-zinc-900 dark:to-zinc-900 '
     >
       <div className='relative flex flex-col items-center z-10'>
         <div className='flex flex-col justify-center items-center w-full'>
@@ -123,7 +126,6 @@ export default function SplashScreen({
             transition={{
               opacity: { duration: 0.3 },
               scale: { duration: 0.3 },
-            //   x: { duration: 0.5, delay: 0.5 },
               y: { duration: 0.5, delay: 0.5 },
             }}
             className='mt-10 -mb-16'
@@ -147,7 +149,7 @@ export default function SplashScreen({
                   delay: showText ? index * 0.1 : 0,
                   ease: [0.215, 0.61, 0.355, 1],
                 }}
-                className='inline-block font-black text-7xl tracking-wider'
+                className='inline-block font-black text-5xl sm:text-6xl md:text-7xl tracking-wider'
                 style={{
                   fontFamily: 'Orbitron, sans-serif',
                   WebkitTextStroke: '2px rgba(99,102,241,0.8)',
@@ -165,7 +167,7 @@ export default function SplashScreen({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 20 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className='mt-6 text-xl font-light tracking-widest text-indigo-200'
+          className='mt-6 text-lg sm:text-xl font-light text-blue-500 dark:text-yellow-500'
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           Chat Smarter, Learn Faster

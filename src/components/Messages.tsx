@@ -4,14 +4,13 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { MessageSkeleton } from './MessageSkeleton';
 
-export function Messages({
-  messages,
-  isLoading,
-}: {
-  messages: Message[];
-  isLoading: boolean;
-}) {
 
+interface MessagesProps {
+  messages: Message[];
+  isLoading: boolean; // Add this line
+}
+
+export function Messages({ messages, isLoading }: MessagesProps) {
   if (isLoading) {
     return <MessageSkeleton />;
   }
